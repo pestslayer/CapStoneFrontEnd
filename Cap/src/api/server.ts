@@ -1,6 +1,6 @@
 export const server_calls = {
     get: async (): Promise<Response> => {
-        const response = await fetch(`http://127.0.0.1:5000/api/ticket`, {
+        const response = await fetch(`https://capstone-backend-hgy6.onrender.com/api/ticket`, {
             method: 'GET',
             headers: {
                 'Content-Type': 'application/json',
@@ -14,7 +14,7 @@ export const server_calls = {
     },
 
     create: async (data: any = {}): Promise<any> => {
-        const response = await fetch(`http://127.0.0.1:5000/api/ticket`, {
+        const response = await fetch(`https://capstone-backend-hgy6.onrender.com/api/ticket`, {
             method: "POST",
             headers: {
                 'Content-Type': 'application/json',
@@ -29,7 +29,7 @@ export const server_calls = {
     },
 
     update: async (id: string, data: any = {}): Promise<any> => {
-        const response = await fetch(`http://127.0.0.1:5000/api/ticket/${id}`, {
+        const response = await fetch(`https://capstone-backend-hgy6.onrender.com/ticket/${id}`, {
             method: 'PUT',
             headers: {
                 'Content-Type': 'application/json',
@@ -44,7 +44,7 @@ export const server_calls = {
     },
 
     delete: async (id: string): Promise<void> => {
-        const response = await fetch(`http://127.0.0.1:5000/api/ticket/${id}`, {
+        const response = await fetch(`https://capstone-backend-hgy6.onrender.com/api/ticket/${id}`, {
             method: 'DELETE',
             headers: {
                 'Content-Type': 'application/json',
