@@ -1,10 +1,10 @@
 export const server_calls = {
-    get: async (): Promise<Response> => {
+    get: async () => {
         const response = await fetch(`https://capstone-backend-hgy6.onrender.com/api/ticket`, {
             method: 'GET',
             headers: {
                 'Content-Type': 'application/json',
-                'Access-Control-Allow-Origin': '*' // Corrected header name
+                'Access-Control-Allow-Origin': '*' 
             }
         });
         if (!response.ok) {
@@ -13,7 +13,7 @@ export const server_calls = {
         return response;
     },
 
-    create: async (data: any = {}): Promise<any> => {
+    create: async (data: any = {}) => {
         const response = await fetch(`https://capstone-backend-hgy6.onrender.com/api/ticket`, {
             method: "POST",
             headers: {
@@ -28,8 +28,8 @@ export const server_calls = {
         return await response.json();
     },
 
-    update: async (id: string, data: any = {}): Promise<any> => {
-        const response = await fetch(`https://capstone-backend-hgy6.onrender.com/ticket/${id}`, {
+    update: async (id: string, data: any = {}) => {
+        const response = await fetch(`https://capstone-backend-hgy6.onrender.com/api/ticket/${id}`, {
             method: 'PUT',
             headers: {
                 'Content-Type': 'application/json',
@@ -43,7 +43,7 @@ export const server_calls = {
         return await response.json();
     },
 
-    delete: async (id: string): Promise<void> => {
+    delete: async (id: string) => {
         const response = await fetch(`https://capstone-backend-hgy6.onrender.com/api/ticket/${id}`, {
             method: 'DELETE',
             headers: {
