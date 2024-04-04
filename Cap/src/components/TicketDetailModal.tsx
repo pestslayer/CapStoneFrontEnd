@@ -55,6 +55,7 @@ const TicketDetailModal: React.FC<TicketDetailModalProps> = ({ ticket, onClose }
             <p>Rate: {ticket.rate}</p>
             <p>Target: {ticket.target}</p>
             <p>Product: {ticket.product}</p>
+            <button  className="p-3 bg-slate-300 rounded m-3 hover:bg-slate-800 hover:text-white" onClick={window.print}>Print</button>
           </div>
         </div>
       )}

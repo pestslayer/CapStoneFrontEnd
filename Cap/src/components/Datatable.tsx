@@ -101,7 +101,6 @@ const DataTable = () => {
                 <DataGrid 
                     rows={inventoryData} 
                     columns={columns} 
-                    rowsPerPageOptions={[5]}
                     checkboxSelection={true} 
                     onSelectionModelChange={(item: any) => {
                         setSelectionModel(item);
